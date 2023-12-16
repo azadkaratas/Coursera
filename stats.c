@@ -20,7 +20,6 @@
 #include <stdio.h>
 #include "stats.h"
 
-/* Size of the Data Set */
 #define SIZE (40)
 
 void main() {
@@ -30,11 +29,38 @@ void main() {
                               200, 122, 150, 90,   92,  87, 177, 244,
                               201,   6,  12,  60,   8,   2,   5,  67,
                                 7,  87, 250, 230,  99,   3, 100,  90};
+  
+  printf("Printing array:\n");
+  print_array(test, SIZE);
+  print_statistics(test, SIZE);
+}
 
-  /* Other Variable Declarations Go Here */
-  /* Statistics and Printing Functions Go Here */
+void print_statistics(unsigned char *arr, unsigned int size){
 
 }
 
-/* Add other Implementation File Code Here */
+void print_array(unsigned char *arr, unsigned int size){
+
+}
+
+
+unsigned int find_median(unsigned char *arr, unsigned int size){
+
+}
+
+double find_mean(unsigned char *arr, unsigned int size){
+
+}
+
+unsigned int find_maximum(unsigned char *arr, unsigned int size){
+
+}
+
+unsigned int find_minimum(unsigned char *arr, unsigned int size){
+
+}
+
+void sort_array(unsigned char *arr, unsigned int size){
+
+}
 

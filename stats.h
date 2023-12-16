@@ -20,20 +20,87 @@
 #ifndef __STATS_H__
 #define __STATS_H__
 
-/* Add Your Declarations and Function Comments here */ 
 
 /**
- * @brief <Add Brief Description of Function Here>
+ * @brief Prints statistics of the array
  *
- * <Add Extended Description Here>
+ * Includes minimum, maximum, mean and median information
  *
- * @param <Add InputName> <add description here>
- * @param <Add InputName> <add description here>
- * @param <Add InputName> <add description here>
- * @param <Add InputName> <add description here>
+ * @param arr Pointer to the data array
+ * @param size Size of the array
  *
- * @return <Add Return Informaiton here>
+ * @return None
  */
+void print_statistics(unsigned char *arr, unsigned int size);
+
+
+/**
+ * @brief Prints elements of the array
+ *
+ * @param arr Pointer to the data array
+ * @param size Size of the array
+ *
+ * @return None
+ */
+void print_array(unsigned char *arr, unsigned int size);
+
+
+/**
+ * @brief Finds the median of the array
+ *
+ * @param arr Pointer to the data array
+ * @param size Size of the array
+ *
+ * @return Median value of the array
+ */
+unsigned int find_median(unsigned char *arr, unsigned int size);
+
+
+/**
+ * @brief Finds the mean value of the array
+ *
+ * @param arr Pointer to the data array
+ * @param size Size of the array
+ *
+ * @return Mean value of the array
+ */
+double find_mean(unsigned char *arr, unsigned int size);
+
+
+/**
+ * @brief Finds the maximum of the array
+ *
+ * @param arr Pointer to the data array
+ * @param size Size of the array
+ *
+ * @return Maximum value of the array
+ */
+unsigned int find_maximum(unsigned char *arr, unsigned int size);
+
+
+/**
+ * @brief Finds the minimum of the array
+ *
+ * @param arr Pointer to the data array
+ * @param size Size of the array
+ *
+ * @return Minimum value of the array
+ */
+unsigned int find_minimum(unsigned char *arr, unsigned int size);
+
+
+/**
+ * @brief Sorts array
+ * 
+ * This function sorts and changes the input array.
+ * Zeroth element is the largest value in the sorted array.
+ *
+ * @param arr Pointer to the data array
+ * @param size Size of the array
+ *
+ * @return None
+ */
+void sort_array(unsigned char *arr, unsigned int size);
 
 
 #endif /* __STATS_H__ */

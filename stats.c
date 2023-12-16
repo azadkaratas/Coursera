@@ -36,31 +36,74 @@ void main() {
 }
 
 void print_statistics(unsigned char *arr, unsigned int size){
-
+  
+  printf("Printing statistics of the array: \n");
+  
+  printf("Median of the array: %d\n", find_median(arr, size));
+  printf("Mean of the array: %f\n", find_mean(arr, size));
+  printf("Maximum of the array: %d\n", find_maximum(arr, size));
+  printf("Minimum of the array: %d\n", find_minimum(arr, size));
 }
 
 void print_array(unsigned char *arr, unsigned int size){
-
+  unsigned int i = 0;
+  while(i < size){
+    printf("%d ", arr[i]); 
+    i++;
+  }
+  printf("\n");
 }
 
 
 unsigned int find_median(unsigned char *arr, unsigned int size){
-
+	// First sort the array
+	sort_array(arr, size);
+	
+	// Then return the element at the middle
+	return arr[size/2];
 }
 
 double find_mean(unsigned char *arr, unsigned int size){
-
+  unsigned int i = 0;
+  unsigned int sum = 0;
+	
+	// First calculate the sum value
+  while(i < size){
+	  sum += arr[i];
+    i++;
+  }
+	
+	// Then return the average
+	return (double)sum/size;
 }
 
 unsigned int find_maximum(unsigned char *arr, unsigned int size){
-
+	// First sort the array
+	sort_array(arr, size);
+	
+	// Then return the first element
+	return arr[0];
 }
 
 unsigned int find_minimum(unsigned char *arr, unsigned int size){
-
+	// First sort the array
+	sort_array(arr, size);
+	
+	// Then return the last element
+	return arr[size-1];
 }
 
 void sort_array(unsigned char *arr, unsigned int size){
-
+	// Sorting with basic BubbleSort
+	int temp, i, j;
+	for(i = 0; i < size; i++){
+		for(j = 0; j < i; j++){
+			if(arr[i] > arr[j]){
+				temp = arr[i];
+				arr[i] = arr[j];
+				arr[j] = temp;
+			}
+		}
+	}
 }
 
